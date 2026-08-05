@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Play } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Badge from "@/components/ui/Badge";
@@ -37,16 +38,16 @@ export default function Podcast() {
       description="Chaque épisode croise trois voix : un vécu, un expert, une facilitation. Concrètement : 1 caster, 2 invités, 1 témoignage, 1 débat, 1 ouverture."
     >
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
-        <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl3 bg-splash-gradient">
-          <div
-            aria-hidden
-            className="absolute inset-0 opacity-30 mix-blend-overlay"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 25% 25%, white 2px, transparent 2px)",
-              backgroundSize: "28px 28px",
-            }}
+        <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl3 bg-ink">
+          <Image
+            src="/photos/plateau-equipe.jpg"
+            alt="L'équipe SPLASH en tournage sur le plateau"
+            fill
+            sizes="(min-width: 1024px) 55vw, 100vw"
+            className="object-cover"
+            priority={false}
           />
+          <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/0 to-transparent" />
           <button
             type="button"
             aria-label="Regarder un aperçu du plateau SPLASH"
@@ -54,7 +55,7 @@ export default function Podcast() {
           >
             <Play size={28} className="ml-1" />
           </button>
-          <span className="absolute bottom-6 left-6 rounded-full bg-ink/40 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
+          <span className="absolute bottom-6 left-6 rounded-full bg-ink/50 px-4 py-1.5 text-xs font-medium text-white backdrop-blur">
             Visuel plateau — Saison 1
           </span>
         </div>

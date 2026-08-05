@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Zap, ShieldAlert, Search, MessageSquareQuote } from "lucide-react";
 import Section from "@/components/ui/Section";
 
@@ -11,9 +12,18 @@ const items = [
 export default function ZoneSplash() {
   return (
     <Section theme="dark" className="relative overflow-hidden">
+      <div aria-hidden className="absolute inset-0 bg-violet-700">
+        <Image
+          src="/photos/zone-splash-buzzer.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="duotone-violet object-cover opacity-50"
+        />
+      </div>
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-violet-900/40 via-transparent to-orange-900/20"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-ink via-ink/85 to-ink/60"
       />
       <div className="relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
