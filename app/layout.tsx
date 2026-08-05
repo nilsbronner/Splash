@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Anton, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 
-const spaceGrotesk = Space_Grotesk({
+const anton = Anton({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "600", "700"],
+  weight: ["400"],
   display: "swap",
 });
 
-const inter = Inter({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
       "Le média qui prend soin du jeu vidéo. Podcast, communauté et ressources pour joueurs, créateurs, associations et institutions.",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/brand/icon-orange.png",
   },
 };
 
@@ -63,8 +63,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${spaceGrotesk.variable} ${inter.variable}`}>
-      <body className="font-sans antialiased bg-ink text-white">
+    <html lang="fr" className={`${anton.variable} ${jakarta.variable}`}>
+      <body className="font-sans antialiased bg-cream text-ink">
         <a href="#main-content" className="skip-link">
           Aller au contenu principal
         </a>

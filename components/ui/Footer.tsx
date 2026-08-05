@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Container from "./Container";
 import { footerLinks } from "@/lib/nav";
 
@@ -8,8 +9,14 @@ export default function Footer() {
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <p className="font-display text-2xl font-bold">SPLASH</p>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/60">
+            <Image
+              src="/brand/logo-wordmark-white.png"
+              alt="SPLASH"
+              width={140}
+              height={53}
+              className="h-9 w-auto"
+            />
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
               Ou comment heal le game. Le média qui rassemble joueurs, professionnels, chercheurs,
               associations et entreprises autour d&apos;un objectif commun : prendre soin du jeu vidéo.
             </p>

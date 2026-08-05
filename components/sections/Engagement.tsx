@@ -17,7 +17,7 @@ export default function Engagement() {
     >
       <div className="grid gap-6 md:grid-cols-2">
         <div className="rounded-xl3 border border-ink/8 bg-white p-8 shadow-sm">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-heal-50 text-heal-700">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-orange-50 text-orange-700">
             <FileText size={20} />
           </span>
           <h3 className="mt-5 font-display text-xl font-semibold">
@@ -27,13 +27,13 @@ export default function Engagement() {
             Nos engagements concrets pour un jeu vidéo plus inclusif : représentation, accessibilité,
             prévention des violences en ligne et soutien aux publics vulnérables.
           </p>
-          <Button href="#" variant="light" size="md" className="mt-6">
+          <Button href="#" variant="dark" size="md" className="mt-6">
             Lire la charte
           </Button>
         </div>
 
         <div className="rounded-xl3 border border-ink/8 bg-white p-8 shadow-sm">
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-splash-50 text-splash-700">
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-violet-50 text-violet-700">
             <FileText size={20} />
           </span>
           <h3 className="mt-5 font-display text-xl font-semibold">Charte éditoriale</h3>
@@ -41,20 +41,20 @@ export default function Engagement() {
             Nos règles de fabrication : rigueur des sources, respect des témoins, contradictoire et
             indépendance vis-à-vis de nos partenaires.
           </p>
-          <Button href="#" variant="light" size="md" className="mt-6">
+          <Button href="#" variant="dark" size="md" className="mt-6">
             Lire la charte
           </Button>
         </div>
       </div>
 
-      <div className="mt-10 flex flex-col items-center gap-5 rounded-xl3 bg-heal-splash p-10 text-center text-white">
+      <div className="mt-10 flex flex-col items-center gap-5 rounded-xl3 bg-splash-gradient p-10 text-center text-white">
         <p className="font-display text-2xl font-semibold">Vous partagez ces valeurs ?</p>
         <p className="max-w-md text-white/85">
           Signez la charte pour montrer votre soutien à une culture du jeu vidéo plus saine et plus
           inclusive.
         </p>
         <Button
-          variant="light"
+          variant="dark"
           size="lg"
           onClick={() => setSigned(true)}
           disabled={signed}

@@ -21,7 +21,7 @@ export default function Concept() {
             key={stat.label}
             className="rounded-xl2 border border-ink/8 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
           >
-            <p className="font-display text-4xl font-bold text-gradient-heal">{stat.value}</p>
+            <p className="font-display text-4xl font-bold text-gradient-splash">{stat.value}</p>
             <p className="mt-3 text-sm leading-relaxed text-ink/60">{stat.label}</p>
           </div>
         ))}
@@ -31,7 +31,7 @@ export default function Concept() {
         <p className="font-display text-2xl font-semibold leading-snug md:text-3xl">
           SPLASH est un média qui rassemble joueurs, professionnels, chercheurs, associations et
           entreprises autour d&apos;un objectif commun :{" "}
-          <span className="text-gradient-heal">prendre soin du jeu vidéo.</span>
+          <span className="text-gradient-splash">prendre soin du jeu vidéo.</span>
         </p>
       </div>
     </Section>

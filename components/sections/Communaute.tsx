@@ -18,10 +18,10 @@ export default function Communaute() {
     <Section id="communaute" theme="dark" className="relative overflow-hidden">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
         <div>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/8 px-4 py-1.5 text-sm font-medium text-heal-300">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/8 px-4 py-1.5 text-sm font-medium text-orange-300">
             La communauté
           </p>
-          <h2 className="font-display text-3xl font-semibold leading-tight md:text-5xl">
+          <h2 className="font-display text-3xl uppercase leading-[0.95] tracking-tight md:text-5xl">
             Un Discord pour continuer la conversation
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-white/65">

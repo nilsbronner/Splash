@@ -43,7 +43,7 @@ export default function Soutiens() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="focus-ring block rounded-xl2 border border-ink/8 p-4 transition-colors hover:border-heal-400/50 hover:bg-heal-50/40"
+                      className="focus-ring block rounded-xl2 border border-ink/8 p-4 transition-colors hover:border-orange-400/50 hover:bg-orange-50/40"
                     >
                       <p className="font-semibold text-ink">{item.name}</p>
                       <p className="mt-1 text-xs leading-relaxed text-ink/55">{item.description}</p>
@@ -58,7 +58,7 @@ export default function Soutiens() {
                 )}
               </div>
 
-              <Button href="#participer" variant="light" size="md" className="mt-6 w-full">
+              <Button href="#participer" variant="dark" size="md" className="mt-6 w-full">
                 Devenir {col.title.toLowerCase().replace(/s$/, "")}
               </Button>
             </div>

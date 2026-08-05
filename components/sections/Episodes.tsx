@@ -32,7 +32,7 @@ export default function Episodes() {
             className={clsx(
               "focus-ring rounded-full px-4 py-2 text-sm font-medium transition-colors",
               active === cat
-                ? "bg-heal-splash text-white"
+                ? "bg-splash-gradient text-white"
                 : "bg-white/8 text-white/65 hover:bg-white/14 hover:text-white"
             )}
           >
@@ -45,9 +45,9 @@ export default function Episodes() {
         {filtered.map((ep) => (
           <article
             key={ep.id}
-            className="group flex flex-col overflow-hidden rounded-xl3 border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-heal-400/40"
+            className="group flex flex-col overflow-hidden rounded-xl3 border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-orange-400/40"
           >
-            <div className="relative flex aspect-video items-center justify-center bg-heal-splash">
+            <div className="relative flex aspect-video items-center justify-center bg-splash-gradient">
               <span className="absolute left-4 top-4 rounded-full bg-ink/40 px-3 py-1 text-xs font-medium text-white backdrop-blur">
                 {ep.releaseDate}
               </span>

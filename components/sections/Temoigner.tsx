@@ -53,7 +53,7 @@ export default function Temoigner() {
       <div className="mx-auto max-w-2xl rounded-xl3 border border-ink/8 bg-white p-8 shadow-sm md:p-10">
         {submitted ? (
           <div className="flex flex-col items-center gap-4 py-10 text-center" role="status" aria-live="polite">
-            <span className="flex h-16 w-16 items-center justify-center rounded-full bg-heal-50 text-heal-600">
+            <span className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-50 text-orange-600">
               <CheckCircle2 size={32} />
             </span>
             <p className="font-display text-2xl font-semibold">Merci pour votre confiance.</p>
@@ -61,7 +61,7 @@ export default function Temoigner() {
               Votre message a bien été transmis à l&apos;équipe SPLASH. Nous revenons vers vous dès
               que possible.
             </p>
-            <Button variant="light" size="md" onClick={() => setSubmitted(false)}>
+            <Button variant="dark" size="md" onClick={() => setSubmitted(false)}>
               Envoyer un autre message
             </Button>
           </div>
@@ -76,9 +76,9 @@ export default function Temoigner() {
                   <label
                     key={r.value}
                     className={clsx(
-                      "focus-within:ring-2 focus-within:ring-heal-400 flex cursor-pointer items-center gap-3 rounded-xl2 border p-4 text-sm font-medium transition-colors",
+                      "focus-within:ring-2 focus-within:ring-orange-400 flex cursor-pointer items-center gap-3 rounded-xl2 border p-4 text-sm font-medium transition-colors",
                       reason === r.value
-                        ? "border-heal-500 bg-heal-50 text-heal-800"
+                        ? "border-orange-500 bg-orange-50 text-orange-800"
                         : "border-ink/10 text-ink/70 hover:border-ink/25"
                     )}
                   >
@@ -104,9 +104,9 @@ export default function Temoigner() {
                   <label
                     key={v.value}
                     className={clsx(
-                      "focus-within:ring-2 focus-within:ring-heal-400 flex cursor-pointer gap-3 rounded-xl2 border p-4 transition-colors",
+                      "focus-within:ring-2 focus-within:ring-orange-400 flex cursor-pointer gap-3 rounded-xl2 border p-4 transition-colors",
                       visibility === v.value
-                        ? "border-heal-500 bg-heal-50"
+                        ? "border-orange-500 bg-orange-50"
                         : "border-ink/10 hover:border-ink/25"
                     )}
                   >
@@ -137,7 +137,7 @@ export default function Temoigner() {
                   name="name"
                   type="text"
                   autoComplete="name"
-                  className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-heal-500"
+                  className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-orange-500"
                 />
               </div>
               <div>
@@ -150,7 +150,7 @@ export default function Temoigner() {
                   type="email"
                   autoComplete="email"
                   required={visibility !== "anonyme"}
-                  className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-heal-500"
+                  className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-orange-500"
                 />
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function Temoigner() {
                 name="message"
                 required
                 rows={5}
-                className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-heal-500"
+                className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-orange-500"
                 placeholder="Racontez-nous, en toute confiance..."
               />
             </div>

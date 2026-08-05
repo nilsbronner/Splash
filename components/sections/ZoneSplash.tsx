@@ -13,14 +13,14 @@ export default function ZoneSplash() {
     <Section theme="dark" className="relative overflow-hidden">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-splash-900/40 via-transparent to-heal-900/20"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-violet-900/40 via-transparent to-orange-900/20"
       />
       <div className="relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-splash-500/15 px-4 py-1.5 text-sm font-medium text-splash-300">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-violet-500/15 px-4 py-1.5 text-sm font-medium text-violet-300">
             Segment signature
           </p>
-          <h2 className="font-display text-3xl font-semibold leading-tight md:text-5xl">
+          <h2 className="font-display text-3xl uppercase leading-[0.95] tracking-tight md:text-5xl">
             La Zone Splash
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-white/65">
@@ -36,7 +36,7 @@ export default function ZoneSplash() {
               key={item.label}
               className="glass flex flex-col items-start gap-4 rounded-xl2 p-6 transition-transform hover:-translate-y-1"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-splash-500/20 text-splash-300">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-violet-500/20 text-violet-300">
                 <item.icon size={20} />
               </span>
               <p className="font-display text-lg font-semibold">{item.label}</p>

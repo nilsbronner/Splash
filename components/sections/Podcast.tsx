@@ -37,7 +37,7 @@ export default function Podcast() {
       description="Chaque épisode croise trois voix : un vécu, un expert, une facilitation. Concrètement : 1 caster, 2 invités, 1 témoignage, 1 débat, 1 ouverture."
     >
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch">
-        <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl3 bg-heal-splash">
+        <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl3 bg-splash-gradient">
           <div
             aria-hidden
             className="absolute inset-0 opacity-30 mix-blend-overlay"
@@ -69,7 +69,7 @@ export default function Podcast() {
                 {i + 1}
               </span>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-heal-600">
+                <p className="text-xs font-semibold uppercase tracking-wide text-orange-600">
                   {item.step}
                 </p>
                 <p className="mt-0.5 font-display text-base font-semibold">{item.title}</p>
@@ -82,7 +82,7 @@ export default function Podcast() {
 
       <div className="mt-16 flex flex-col gap-8 rounded-xl3 border border-ink/8 bg-white p-8 md:flex-row md:items-center md:justify-between md:p-10">
         <div>
-          <Badge tone="heal">Saison 1 · 6 épisodes</Badge>
+          <Badge tone="orange">Saison 1 · 6 épisodes</Badge>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-ink/60">
             Une équipe éditoriale portée par Alx à l&apos;animation, entourée de Lucia, Gabin et
             Gabriel, avec l&apos;équipe de production BEMOTION au plateau et au montage.
@@ -91,7 +91,7 @@ export default function Podcast() {
         <div className="flex flex-wrap gap-4">
           {team.map((member) => (
             <div key={member.name} className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-heal-splash text-sm font-semibold text-white">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-splash-gradient text-sm font-semibold text-white">
                 {member.name.slice(0, 2).toUpperCase()}
               </span>
               <div>

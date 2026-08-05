@@ -2,7 +2,7 @@ import Link from "next/link";
 import { clsx } from "clsx";
 import type { ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "ghost" | "light";
+type Variant = "primary" | "secondary" | "outlineLight" | "ghost" | "dark";
 type Size = "md" | "lg";
 
 const base =
@@ -10,12 +10,13 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-heal-splash text-white shadow-glow-heal hover:brightness-110 hover:-translate-y-0.5",
+    "bg-orange-500 text-cream shadow-glow-orange hover:bg-orange-600 hover:-translate-y-0.5",
   secondary:
-    "glass text-white hover:bg-white/12 hover:-translate-y-0.5",
-  ghost: "text-white/80 hover:text-white underline-offset-4 hover:underline",
-  light:
-    "bg-ink text-white hover:bg-ink-soft hover:-translate-y-0.5",
+    "border-2 border-ink/15 bg-ink/[0.03] text-ink hover:border-ink/30 hover:bg-ink/[0.06] hover:-translate-y-0.5",
+  outlineLight:
+    "border-2 border-cream/25 text-cream hover:border-cream/50 hover:bg-cream/10 hover:-translate-y-0.5",
+  ghost: "text-ink/70 hover:text-ink underline-offset-4 hover:underline",
+  dark: "bg-ink text-cream hover:bg-ink-soft hover:-translate-y-0.5",
 };
 
 const sizes: Record<Size, string> = {

@@ -7,10 +7,24 @@ la caution scientifique et associative de **RESET**.
 ## Stack
 
 - [Next.js 15](https://nextjs.org/) (App Router) + TypeScript
-- [Tailwind CSS](https://tailwindcss.com/) — design system SPLASH (vert « heal », bleu « Chug
-  Splash », glassmorphism léger)
+- [Tailwind CSS](https://tailwindcss.com/) — design system SPLASH basé sur la charte graphique
+  fournie : crème `#F8F0EA`, noir `#161616`, orange `#FF5011`, violet `#7F5CF9` / lavande `#A794D6`
 - [Framer Motion](https://www.framer.com/motion/) pour les animations
 - [lucide-react](https://lucide.dev/) pour les icônes
+
+## Identité de marque
+
+Les assets de marque (`public/brand/`) sont extraits de la charte graphique (DA/CG) fournie :
+- `logo-wordmark-black.png` / `logo-wordmark-white.png` — le lettrage « Splash » façon graffiti
+- `icon-orange.png` — le pictogramme éclaboussure/étincelle
+- `pattern-blobs.png` — la texture organique utilisée comme bande décorative (masque CSS
+  recolorable, voir `Hero.tsx`)
+
+**Typographies** : la charte spécifie **Anton** (titres, condensé/majuscules) et **Satoshi** (texte
+courant). Satoshi n'étant pas distribué via Google Fonts et Fontshare n'étant pas joignable depuis
+cet environnement, le corps de texte utilise **Plus Jakarta Sans** en substitut proche (mêmes
+proportions géométriques). Pour un rendu fidèle à 100 %, remplacer par les fichiers Satoshi
+auto-hébergés (`@font-face`) dans `app/layout.tsx`.
 
 ## Démarrer en local
 
@@ -42,7 +56,7 @@ npm run lint    # lint
 ## Contenu V1 — à savoir
 
 - Les visuels (plateau, logos partenaires, photos presse) sont pour l'instant des placeholders
-  stylisés (dégradés, initiales) en attendant les assets définitifs de la DA.
+  stylisés (dégradés, initiales) en attendant les vraies photos/captures.
 - Le formulaire « Témoigner » est fonctionnel côté interface (validation, états) mais n'est pas
   encore relié à un backend / service d'envoi — à connecter avant mise en production.
 - La section Presse liste les livrables attendus, marqués « Bientôt disponible » : à remplacer par

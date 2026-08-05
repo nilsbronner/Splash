@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-display: "Clash", var(--font-sans);
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Anton", var(--font-sans);
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -22,34 +22,41 @@
 
 html,
 body {
-  background-color: #0a0b0d;
-  color: #ffffff;
+  background-color: #f8f0ea;
+  color: #161616;
 }
 
 ::selection {
-  background-color: #0fc46e;
-  color: #0a0b0d;
+  background-color: #ff5011;
+  color: #f8f0ea;
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(22, 22, 22, 0.75);
+  border: 1px solid rgba(248, 240, 234, 0.1);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
 .glass-light {
-  background: rgba(10, 11, 13, 0.04);
-  border: 1px solid rgba(10, 11, 13, 0.08);
+  background: rgba(248, 240, 234, 0.8);
+  border: 1px solid rgba(22, 22, 22, 0.08);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
-.text-gradient-heal {
-  background: linear-gradient(120deg, #2be186, #226dff);
+.text-gradient-splash {
+  background: linear-gradient(120deg, #ff5011, #7f5cf9);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Duotone photo treatment: apply to an <img>, wrap it in a container with a
+   violet background (e.g. bg-violet-300) so the luminosity blend tints it. */
+.duotone-violet {
+  filter: grayscale(1) contrast(1.15);
+  mix-blend-mode: luminosity;
 }
 
 .skip-link {
@@ -58,8 +65,8 @@ body {
   top: 0;
   z-index: 100;
   padding: 0.75rem 1.25rem;
-  background: #0fc46e;
-  color: #0a0b0d;
+  background: #ff5011;
+  color: #f8f0ea;
   font-weight: 600;
   border-radius: 0 0 0.5rem 0;
 }
@@ -73,7 +80,7 @@ body {
 }
 
 .focus-ring:focus-visible {
-  outline: 2px solid #2be186;
+  outline: 2px solid #ff5011;
   outline-offset: 3px;
   border-radius: 0.25rem;
 }

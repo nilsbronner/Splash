@@ -20,7 +20,7 @@ export default function PourquoiSoutenir() {
       <div className="mx-auto grid max-w-3xl gap-4 sm:grid-cols-2">
         {items.map((item) => (
           <div key={item} className="flex items-start gap-3 rounded-xl2 bg-white/[0.04] p-4">
-            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-heal-splash">
+            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-splash-gradient">
               <Check size={14} className="text-white" />
             </span>
             <p className="text-sm font-medium text-white/85">{item}</p>

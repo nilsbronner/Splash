@@ -26,7 +26,7 @@ export default function Ressources() {
               key={r.label}
               className="flex items-start gap-3 rounded-xl2 border border-ink/8 bg-white p-5 shadow-sm"
             >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-heal-50 text-heal-700">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange-50 text-orange-700">
                 <r.icon size={18} />
               </span>
               <p className="text-sm font-medium leading-snug text-ink/80">{r.label}</p>
@@ -35,7 +35,7 @@ export default function Ressources() {
         </div>
 
         <div className="rounded-xl3 bg-ink p-8 text-white md:p-10">
-          <Badge tone="heal" className="mb-5">
+          <Badge tone="orange" className="mb-5">
             Disponible dès la V1
           </Badge>
           <p className="font-display text-2xl font-semibold leading-snug">

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { clsx } from "clsx";
 import Container from "./Container";
@@ -30,12 +31,19 @@ export default function Navbar() {
     <header
       className={clsx(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled ? "glass shadow-glass" : "bg-transparent"
+        scrolled ? "glass-light shadow-glass" : "bg-transparent"
       )}
     >
       <Container className="flex h-16 items-center justify-between md:h-20">
-        <Link href="/" className="font-display text-xl font-bold tracking-tight text-white focus-ring">
-          SPLASH
+        <Link href="/" className="focus-ring shrink-0" aria-label="SPLASH — accueil">
+          <Image
+            src="/brand/logo-wordmark-black.png"
+            alt="SPLASH"
+            width={140}
+            height={55}
+            priority
+            className="h-8 w-auto md:h-9"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navigation principale">
@@ -43,7 +51,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/75 transition-colors hover:text-white focus-ring"
+              className="text-sm font-medium text-ink/70 transition-colors hover:text-ink focus-ring"
             >
               {link.label}
             </a>
@@ -66,7 +74,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="focus-ring rounded-lg p-2 text-white lg:hidden"
+          className="focus-ring rounded-lg p-2 text-ink lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
@@ -76,14 +84,14 @@ export default function Navbar() {
       </Container>
 
       {open && (
-        <div className="glass border-t border-white/10 lg:hidden">
+        <div className="glass-light border-t border-ink/10 lg:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="focus-ring rounded-lg px-3 py-3 text-base font-medium text-white/85 hover:bg-white/8"
+                className="focus-ring rounded-lg px-3 py-3 text-base font-medium text-ink/85 hover:bg-ink/5"
               >
                 {link.label}
               </a>

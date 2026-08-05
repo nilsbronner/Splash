@@ -2,17 +2,17 @@ import { clsx } from "clsx";
 
 export default function Badge({
   children,
-  tone = "heal",
+  tone = "orange",
   className,
 }: {
   children: React.ReactNode;
-  tone?: "heal" | "splash" | "neutral";
+  tone?: "orange" | "violet" | "neutral";
   className?: string;
 }) {
   const tones = {
-    heal: "bg-heal-50 text-heal-700",
-    splash: "bg-splash-50 text-splash-700",
-    neutral: "bg-white/8 text-white/70",
+    orange: "bg-orange-50 text-orange-700",
+    violet: "bg-violet-50 text-violet-700",
+    neutral: "bg-ink/5 text-ink/60",
   };
 
   return (

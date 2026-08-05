@@ -27,7 +27,7 @@ export default function Faq() {
               className={clsx(
                 "focus-ring shrink-0 rounded-xl2 px-4 py-3 text-left text-sm font-medium transition-colors lg:w-full",
                 activeCat === cat.id
-                  ? "bg-heal-splash text-white"
+                  ? "bg-splash-gradient text-white"
                   : "bg-ink/5 text-ink/65 hover:bg-ink/10"
               )}
             >

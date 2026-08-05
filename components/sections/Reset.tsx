@@ -50,7 +50,7 @@ export default function Reset() {
         {roles.map((r) => (
           <div key={r.name} className="flex-1 p-6">
             <p className="font-display text-lg font-semibold">{r.name}</p>
-            <p className="mt-1 text-xs font-medium uppercase tracking-wide text-heal-300">{r.role}</p>
+            <p className="mt-1 text-xs font-medium uppercase tracking-wide text-orange-300">{r.role}</p>
             <p className="mt-3 text-sm leading-relaxed text-white/55">{r.description}</p>
           </div>
         ))}
@@ -59,7 +59,7 @@ export default function Reset() {
       <div className="grid gap-6 md:grid-cols-3">
         {contributions.map((c) => (
           <div key={c.title} className="rounded-xl2 border border-white/10 bg-white/[0.03] p-7">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-heal-splash text-white">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-splash-gradient text-white">
               <c.icon size={18} />
             </span>
             <p className="mt-5 font-display text-base font-semibold">{c.title}</p>

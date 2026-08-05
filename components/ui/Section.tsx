@@ -27,7 +27,7 @@ export default function Section({
       id={id}
       className={clsx(
         "relative scroll-mt-24 py-24 md:py-32",
-        theme === "dark" ? "bg-ink text-white" : "bg-paper text-ink",
+        theme === "dark" ? "bg-ink text-cream" : "bg-cream text-ink",
         className
       )}
     >
@@ -44,22 +44,22 @@ export default function Section({
                 className={clsx(
                   "mb-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium tracking-wide",
                   theme === "dark"
-                    ? "bg-white/8 text-heal-300"
-                    : "bg-heal-50 text-heal-700"
+                    ? "bg-white/8 text-orange-300"
+                    : "bg-orange-50 text-orange-700"
                 )}
               >
                 {eyebrow}
               </p>
             )}
             {title && (
-              <h2 className="font-display text-3xl font-semibold leading-tight md:text-5xl">
+              <h2 className="font-display text-4xl uppercase leading-[0.95] tracking-tight md:text-6xl">
                 {title}
               </h2>
             )}
             {description && (
               <p
                 className={clsx(
-                  "mt-5 text-lg leading-relaxed",
+                  "mt-5 max-w-2xl text-lg leading-relaxed",
                   theme === "dark" ? "text-white/65" : "text-ink/60"
                 )}
               >
