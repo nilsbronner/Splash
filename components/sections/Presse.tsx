@@ -34,7 +34,7 @@ export default function Presse() {
         <p className="text-sm text-white/60">
           Une question presse, une demande d&apos;interview ou un partenariat média ?
         </p>
-        <Button href="#temoigner" variant="outlineLight">
+        <Button href="/temoigner" variant="outlineLight">
           <Mail size={16} /> Contacter l&apos;équipe presse
         </Button>
       </div>

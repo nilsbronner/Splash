@@ -88,10 +88,10 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.4 }}
               className="mt-10 flex flex-wrap items-center gap-4"
             >
-              <Button href="#concept" size="lg">
+              <Button href="/le-projet" size="lg">
                 Découvrir le projet
               </Button>
-              <Button href="#podcast" variant="secondary" size="lg">
+              <Button href="/podcast" variant="secondary" size="lg">
                 <Play size={18} /> Écouter le podcast
               </Button>
               <Button
@@ -127,7 +127,7 @@ export default function Hero() {
       </Container>
 
       <a
-        href="#concept"
+        href="#decouvrir"
         aria-label="Défiler vers la section suivante"
         className="focus-ring absolute bottom-24 left-1/2 z-10 hidden -translate-x-1/2 rounded-full border border-ink/15 bg-white/70 p-2.5 text-ink/60 transition-colors hover:text-ink md:block"
       >

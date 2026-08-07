@@ -227,7 +227,7 @@ export const supporters: Supporter[] = [
     name: "RESET",
     description: "Association partenaire, caution scientifique et associative sur les enjeux santé et inclusion.",
     tier: "partenaires",
-    href: "#reset",
+    href: "/reset",
   },
 ];
 

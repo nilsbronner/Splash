@@ -1,39 +1,38 @@
 import Hero from "@/components/sections/Hero";
-import Concept from "@/components/sections/Concept";
-import Mission from "@/components/sections/Mission";
-import Podcast from "@/components/sections/Podcast";
-import ZoneSplash from "@/components/sections/ZoneSplash";
-import Engagement from "@/components/sections/Engagement";
-import Episodes from "@/components/sections/Episodes";
-import Ressources from "@/components/sections/Ressources";
-import Communaute from "@/components/sections/Communaute";
-import Temoigner from "@/components/sections/Temoigner";
-import Reset from "@/components/sections/Reset";
-import Soutiens from "@/components/sections/Soutiens";
-import PourquoiSoutenir from "@/components/sections/PourquoiSoutenir";
-import Participer from "@/components/sections/Participer";
-import Presse from "@/components/sections/Presse";
-import Faq from "@/components/sections/Faq";
+import CtaBanner from "@/components/ui/CtaBanner";
+import LeProjetTeaser from "@/components/teasers/LeProjetTeaser";
+import PodcastTeaser from "@/components/teasers/PodcastTeaser";
+import ZoneSplashTeaser from "@/components/teasers/ZoneSplashTeaser";
+import EngagementTeaser from "@/components/teasers/EngagementTeaser";
+import EpisodesTeaser from "@/components/teasers/EpisodesTeaser";
+import RessourcesTeaser from "@/components/teasers/RessourcesTeaser";
+import CommunauteTeaser from "@/components/teasers/CommunauteTeaser";
+import ResetTeaser from "@/components/teasers/ResetTeaser";
+import SoutenirTeaser from "@/components/teasers/SoutenirTeaser";
+import PresseTeaser from "@/components/teasers/PresseTeaser";
+import FaqTeaser from "@/components/teasers/FaqTeaser";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Concept />
-      <Mission />
-      <Podcast />
-      <ZoneSplash />
-      <Engagement />
-      <Episodes />
-      <Ressources />
-      <Communaute />
-      <Temoigner />
-      <Reset />
-      <Soutiens />
-      <PourquoiSoutenir />
-      <Participer />
-      <Presse />
-      <Faq />
+      <LeProjetTeaser />
+      <PodcastTeaser />
+      <ZoneSplashTeaser />
+      <EngagementTeaser />
+      <EpisodesTeaser />
+      <RessourcesTeaser />
+      <CommunauteTeaser />
+      <ResetTeaser />
+      <SoutenirTeaser />
+      <PresseTeaser />
+      <FaqTeaser />
+      <CtaBanner
+        title="Votre histoire peut aider quelqu'un d'autre"
+        description="Partager un vécu, proposer un sujet, signaler un cas ou simplement prendre contact : c'est le bouton le plus important du site."
+        primary={{ label: "Je témoigne", href: "/temoigner" }}
+        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/splash", external: true }}
+      />
     </>
   );
 }

@@ -48,18 +48,18 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navigation principale">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-ink/70 transition-colors hover:text-ink focus-ring"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button href="#temoigner" variant="secondary" size="md">
+          <Button href="/temoigner" variant="secondary" size="md">
             Témoigner
           </Button>
           <Button
@@ -87,17 +87,17 @@ export default function Navbar() {
         <div className="glass-light border-t border-ink/10 lg:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className="focus-ring rounded-lg px-3 py-3 text-base font-medium text-ink/85 hover:bg-ink/5"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <div className="mt-3 flex flex-col gap-3">
-              <Button href="#temoigner" variant="secondary" onClick={() => setOpen(false)}>
+              <Button href="/temoigner" variant="secondary" onClick={() => setOpen(false)}>
                 Témoigner
               </Button>
               <Button

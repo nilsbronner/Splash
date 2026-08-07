@@ -40,18 +40,45 @@ npm run build   # build de production
 npm run lint    # lint
 ```
 
-## Structure
+## Architecture du site
 
-- `app/page.tsx` — assemble toutes les sections de la page d'accueil, dans l'ordre de
-  l'arborescence du brief (Hero, Le concept, Notre mission, Le podcast, La Zone Splash, Notre
-  engagement, Les épisodes, Ressources, La communauté, Témoigner, Le projet RESET, Nos soutiens,
-  Pourquoi nous soutenir, Participer au projet, Presse, FAQ).
-- `components/sections/` — une section = un composant.
-- `components/ui/` — briques réutilisables (Navbar, Footer, Button, Section, Container, Badge,
-  LegalPage).
+Le site n'est plus une seule page à tiroirs : c'est une **home condensée** qui convertit, avec un
+teaser court par grande partie du projet, chacun renvoyant vers une **page dédiée** plus fournie.
+
+- `app/page.tsx` — la home : `Hero` puis un `Teaser` par section (voir `components/teasers/`),
+  et un `CtaBanner` final vers `/temoigner`.
+- Pages dédiées, chacune `PageHeader` (lien retour) + le(s) composant(s) complet(s) de
+  `components/sections/` réutilisé(s) tel quel + un `CtaBanner` de conversion en bas quand
+  pertinent :
+  - `/le-projet` — `Concept` + `Mission`
+  - `/podcast` — `Podcast`
+  - `/episodes` — `Episodes`
+  - `/zone-splash` — `ZoneSplash`
+  - `/engagement` — `Engagement`
+  - `/ressources` — `Ressources`
+  - `/communaute` — `Communaute`
+  - `/reset` — `Reset`
+  - `/soutenir` — `Soutiens` + `PourquoiSoutenir` + `Participer` (fusionnés en une page de
+    conversion unique)
+  - `/presse` — `Presse`
+  - `/faq` — `Faq`
+  - `/temoigner` — `Temoigner`
+  - `/{mentions-legales,confidentialite,cgu,cgv,cookies}` — pages légales
+
+- `components/sections/` — le contenu complet de chaque partie (un composant = une page dédiée,
+  ou un groupe de pages sur `/le-projet` et `/soutenir`).
+- `components/teasers/` — la version condensée de chaque section pour la home, toujours avec un
+  CTA « En savoir plus » vers sa page dédiée.
+- `components/ui/Teaser.tsx` — le composant générique derrière tous les teasers (eyebrow, titre,
+  description, CTA, visuel optionnel).
+- `components/ui/PageHeader.tsx` / `CtaBanner.tsx` — chrome partagé des pages dédiées (lien retour,
+  bannière de conversion en bas de page).
 - `lib/data.ts` — contenu structuré (épisodes, FAQ, soutiens, cartes de participation, presse).
-- `lib/nav.ts` — liens de navigation et de footer.
-- `app/{mentions-legales,confidentialite,cgu,cgv,cookies}/` — pages légales.
+- `lib/nav.ts` — liens de navigation (pointent maintenant vers les pages dédiées, plus des ancres)
+  et liens de footer.
+
+Pour ajouter du contenu à une page dédiée, éditer directement le composant correspondant dans
+`components/sections/` — il est partagé, donc toute modification s'applique à sa page.
 
 ## Contenu V1 — à savoir
 
