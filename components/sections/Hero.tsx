@@ -18,7 +18,7 @@ const maskStyle = {
 export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden bg-cream pt-24">
-      <div className="pointer-events-none absolute inset-0 bg-splash-gradient-soft" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-orange-100/50 via-cream to-violet-100/50" />
       <div
         aria-hidden
         className="pointer-events-none absolute -left-40 top-10 h-[28rem] w-[28rem] rounded-full bg-orange-300/30 blur-[110px] animate-float"
