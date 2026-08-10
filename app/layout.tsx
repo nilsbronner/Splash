@@ -3,7 +3,6 @@ import { Anton, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
-import MobileEdgeAccent from "@/components/ui/MobileEdgeAccent";
 
 const anton = Anton({
   subsets: ["latin"],
@@ -70,7 +69,6 @@ export default function RootLayout({
           Aller au contenu principal
         </a>
         <Navbar />
-        <MobileEdgeAccent />
         <main id="main-content">{children}</main>
         <Footer />
       </body>
