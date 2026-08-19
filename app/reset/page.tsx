@@ -18,7 +18,7 @@ export default function ResetPage() {
         title="Découvrez comment nous soutenir"
         description="Sponsor, mécène, partenaire ou bénévole : il y a une place pour vous dans le projet SPLASH."
         primary={{ label: "Nos soutiens", href: "/soutenir" }}
-        secondary={{ label: "Témoigner", href: "/temoigner" }}
+        secondary={{ label: "Nous contacter", href: "/temoigner" }}
       />
     </>
   );

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowDown, Play, MessageCircle } from "lucide-react";
+import { ArrowDown, Play } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 
@@ -38,7 +38,7 @@ export default function Hero() {
               transition={{ duration: 0.6 }}
               className="mb-8 inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/70 px-4 py-1.5 text-sm font-medium text-ink/70"
             >
-              Un projet Skillcamp · Production BEMOTION · Caution scientifique RESET
+              Un projet porté par Skillcamp · Bemotion · Reset
             </motion.p>
 
             <motion.div
@@ -62,46 +62,56 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-6 font-display text-4xl uppercase leading-[0.95] tracking-tight text-ink md:text-6xl"
             >
-              Ou comment <span className="text-gradient-splash">heal</span> le game
-              <span className="text-orange-500">.</span>
+              Ça change la vie et le <span className="text-gradient-splash">game</span>
+              <span className="text-orange-500">!</span>
             </motion.h1>
-            <motion.span
-              initial={{ opacity: 0, scaleX: 0 }}
-              animate={{ opacity: 1, scaleX: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-4 block h-1 w-16 origin-left rounded-full bg-violet-400"
-            />
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="mt-3 text-sm font-semibold uppercase tracking-widest text-violet-600"
+            >
+              L&apos;onde de soin dans le jeu vidéo.
+            </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
               className="mt-6 max-w-xl text-lg leading-relaxed text-ink/65"
             >
-              Le média qui rassemble joueurs, professionnels, chercheurs, associations et entreprises
-              autour d&apos;un objectif commun : prendre soin du jeu vidéo.
+              Splash est un podcast qui s&apos;intéresse à ce qui se joue dans la vraie vie du jeu
+              vidéo et de l&apos;esport.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.45 }}
+              className="mt-4 max-w-xl text-lg font-semibold leading-relaxed text-ink"
+            >
+              À Splash, on ne cherche pas l&apos;opinion, mais la compréhension.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+              className="mt-4 max-w-xl text-lg leading-relaxed text-ink/65"
+            >
+              Joueuses et joueurs échangent leurs points de vue avec des professionnels, des
+              chercheurs, des acteurs du secteur. Les différences sont explorées, pas exploitées.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.4 }}
+              transition={{ duration: 0.7, delay: 0.6 }}
               className="mt-10 flex flex-wrap items-center gap-4"
             >
-              <Button href="/le-projet" size="lg">
-                Découvrir le projet
+              <Button href="/episodes" size="lg">
+                <Play size={18} /> Voir les épisodes
               </Button>
-              <Button href="/podcast" variant="secondary" size="lg">
-                <Play size={18} /> Écouter le podcast
-              </Button>
-              <Button
-                href="https://discord.gg/splash"
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="ghost"
-                size="lg"
-              >
-                <MessageCircle size={18} /> Rejoindre Discord
+              <Button href="/le-projet" variant="secondary" size="lg">
+                En savoir plus sur le projet
               </Button>
             </motion.div>
           </div>

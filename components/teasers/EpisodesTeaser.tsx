@@ -9,8 +9,8 @@ export default function EpisodesTeaser() {
     <Teaser
       theme="dark"
       eyebrow="Les épisodes"
-      title="Saison 1 — six voix, six histoires"
-      description="Burnout, inclusion, addiction, crunch... des sujets qui touchent le jeu vidéo, traités sans filtre. Filtrez par thématique et trouvez l'épisode qui vous parle."
+      title="Saison 1"
+      description="Stéréotypes, addiction, mixité... des sujets qui touchent le jeu vidéo et l'esport, traités sans filtre. Un nouvel épisode le premier mercredi de chaque mois."
       href="/episodes"
       ctaLabel="Voir tous les épisodes"
       visual={

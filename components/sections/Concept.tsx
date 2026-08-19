@@ -1,38 +1,64 @@
 import Section from "@/components/ui/Section";
 
-const stats = [
-  { value: "3,3 md+", label: "joueurs et joueuses dans le monde" },
-  { value: "1 sur 3", label: "aurait déjà vécu du harcèlement en ligne" },
-  { value: "6", label: "épisodes pour lancer la conversation" },
+const piliers = [
+  {
+    title: "L'ancrage réel",
+    description: "Chaque épisode part d'une situation concrète liée au jeu vidéo.",
+  },
+  {
+    title: "La circulation de la parole",
+    description: "Aucune voix ne domine. Le dialogue est organisé, équilibré, médiatisé.",
+  },
+  {
+    title: "Une information de qualité",
+    description: "Les experts sont des cautions d'une information vérifiée.",
+  },
+  {
+    title: "La mise en compréhension",
+    description: "On ne cherche pas l'opinion, mais la compréhension.",
+  },
+  {
+    title: "L'ouverture",
+    description: "Chaque épisode se termine par une perspective, pas une conclusion fermée.",
+  },
 ];
 
 export default function Concept() {
   return (
-    <Section
-      id="concept"
-      theme="light"
-      eyebrow="Le concept"
-      title="Le jeu vidéo n'est plus seulement un loisir."
-      description="C'est un espace de vie : on s'y retrouve, on y travaille, on y crée du lien, on y vit aussi des difficultés. SPLASH est né d'un constat simple — il manquait un espace pour en parler sérieusement, sans jugement, avec celles et ceux qui le vivent et celles et ceux qui l'étudient."
-    >
-      <div className="grid gap-6 md:grid-cols-3">
-        {stats.map((stat) => (
-          <div
-            key={stat.label}
-            className="rounded-xl2 border border-ink/8 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
-          >
-            <p className="font-display text-4xl font-bold text-gradient-splash">{stat.value}</p>
-            <p className="mt-3 text-sm leading-relaxed text-ink/60">{stat.label}</p>
-          </div>
-        ))}
+    <Section id="concept" theme="light" eyebrow="Splash-podcasts" title="L'onde de soin dans le jeu vidéo">
+      <div className="mx-auto max-w-2xl space-y-4 text-center text-lg leading-relaxed text-ink/70">
+        <p>
+          SPLASH s&apos;adresse aux communautés du jeu vidéo, mais aussi, aux jeunes générations en
+          général et à la société dans son ensemble.
+        </p>
+        <p>
+          Les podcasts sont fondés sur une exigence pédagogique et sécurisée, un sérieux éditorial,
+          un cadre de dialogue structuré.
+        </p>
       </div>
 
-      <div className="mt-16 rounded-xl3 bg-ink p-10 text-white md:p-14">
-        <p className="font-display text-2xl font-semibold leading-snug md:text-3xl">
-          SPLASH est un média qui rassemble joueurs, professionnels, chercheurs, associations et
-          entreprises autour d&apos;un objectif commun :{" "}
-          <span className="text-gradient-splash">prendre soin du jeu vidéo.</span>
+      <div className="mt-20">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-ink/40">
+          L&apos;ADN de Splash
         </p>
+        <div className="mb-10 h-px w-full bg-ink/10" />
+        <p className="mb-10 max-w-2xl text-lg leading-relaxed text-ink/70">
+          SPLASH est un format de dialogue structuré ancré dans l&apos;univers du jeu vidéo / esport.
+          Son identité repose sur des piliers :
+        </p>
+        <div className="grid gap-6 sm:grid-cols-2">
+          {piliers.map((pilier) => (
+            <div
+              key={pilier.title}
+              className="rounded-xl2 border border-ink/8 bg-white p-6 shadow-sm"
+            >
+              <h3 className="font-display text-base uppercase tracking-tight text-ink">
+                {pilier.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/60">{pilier.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </Section>
   );

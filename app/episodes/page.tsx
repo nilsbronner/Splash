@@ -6,7 +6,7 @@ import Episodes from "@/components/sections/Episodes";
 export const metadata: Metadata = {
   title: "Les épisodes",
   description:
-    "Saison 1 — six voix, six histoires. Filtrez les épisodes SPLASH par thématique : santé, inclusion, esport, handicap, diversité, RSE, recherche, management.",
+    "Saison 1 de SPLASH — un nouvel épisode le premier mercredi de chaque mois. Stéréotypes, addiction, mixité : des sujets qui touchent le jeu vidéo et l'esport.",
 };
 
 export default function EpisodesPage() {
@@ -15,10 +15,9 @@ export default function EpisodesPage() {
       <PageHeader />
       <Episodes />
       <CtaBanner
-        title="Vous avez une histoire à raconter ?"
-        description="Chaque épisode part d'un témoignage. Le vôtre pourrait être le prochain."
-        primary={{ label: "Témoigner", href: "/temoigner" }}
-        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/splash", external: true }}
+        title="Une idée, une histoire, une personne, un sujet à proposer ? Besoin de nous parler ?"
+        primary={{ label: "Nous contacter", href: "/temoigner" }}
+        secondary={{ label: "Rejoindre notre Discord", href: "https://discord.gg/splash", external: true }}
       />
     </>
   );

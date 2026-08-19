@@ -5,6 +5,7 @@ import PodcastTeaser from "@/components/teasers/PodcastTeaser";
 import ZoneSplashTeaser from "@/components/teasers/ZoneSplashTeaser";
 import EngagementTeaser from "@/components/teasers/EngagementTeaser";
 import EpisodesTeaser from "@/components/teasers/EpisodesTeaser";
+import ActualitesTeaser from "@/components/teasers/ActualitesTeaser";
 import RessourcesTeaser from "@/components/teasers/RessourcesTeaser";
 import CommunauteTeaser from "@/components/teasers/CommunauteTeaser";
 import ResetTeaser from "@/components/teasers/ResetTeaser";
@@ -21,6 +22,7 @@ export default function Home() {
       <ZoneSplashTeaser />
       <EngagementTeaser />
       <EpisodesTeaser />
+      <ActualitesTeaser />
       <RessourcesTeaser />
       <CommunauteTeaser />
       <ResetTeaser />
@@ -30,7 +32,7 @@ export default function Home() {
       <CtaBanner
         title="Votre histoire peut aider quelqu'un d'autre"
         description="Partager un vécu, proposer un sujet, signaler un cas ou simplement prendre contact : c'est le bouton le plus important du site."
-        primary={{ label: "Je témoigne", href: "/temoigner" }}
+        primary={{ label: "Nous contacter", href: "/temoigner" }}
         secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/splash", external: true }}
       />
     </>

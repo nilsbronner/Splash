@@ -60,7 +60,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Button href="/temoigner" variant="secondary" size="md">
-            Témoigner
+            Nous contacter
           </Button>
           <Button
             href="https://discord.gg/splash"
@@ -98,7 +98,7 @@ export default function Navbar() {
             ))}
             <div className="mt-3 flex flex-col gap-3">
               <Button href="/temoigner" variant="secondary" onClick={() => setOpen(false)}>
-                Témoigner
+                Nous contacter
               </Button>
               <Button
                 href="https://discord.gg/splash"

@@ -2,6 +2,7 @@ export const navLinks = [
   { label: "Le projet", href: "/le-projet" },
   { label: "Le podcast", href: "/podcast" },
   { label: "Les épisodes", href: "/episodes" },
+  { label: "Actualités", href: "/actualites" },
   { label: "Ressources", href: "/ressources" },
   { label: "Communauté", href: "/communaute" },
   { label: "RESET", href: "/reset" },

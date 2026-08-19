@@ -19,8 +19,8 @@ export default function Episodes() {
       id="episodes"
       theme="dark"
       eyebrow="Les épisodes"
-      title="Saison 1 — six voix, six histoires"
-      description="Filtrez les épisodes par thématique pour retrouver celui qui vous parle."
+      title="Saison 1"
+      description="Un nouvel épisode le premier mercredi de chaque mois."
     >
       <div className="mb-10 flex flex-wrap gap-2" role="group" aria-label="Filtrer les épisodes par thématique">
         {(["Tous", ...categories] as const).map((cat) => (

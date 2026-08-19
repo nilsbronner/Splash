@@ -1,10 +1,10 @@
-import { BookOpen, Users, Sparkles } from "lucide-react";
+import { Radar, MessageSquareText, Compass } from "lucide-react";
 import Teaser from "@/components/ui/Teaser";
 
 const piliers = [
-  { icon: BookOpen, label: "Comprendre" },
-  { icon: Users, label: "Relier" },
-  { icon: Sparkles, label: "Agir" },
+  { icon: Radar, label: "Ancrage réel" },
+  { icon: MessageSquareText, label: "Parole équilibrée" },
+  { icon: Compass, label: "Ouverture" },
 ];
 
 export default function LeProjetTeaser() {
@@ -13,10 +13,10 @@ export default function LeProjetTeaser() {
       id="decouvrir"
       theme="light"
       eyebrow="Le projet"
-      title="Le jeu vidéo n'est plus seulement un loisir."
-      description="C'est un espace de vie où l'on vit aussi des difficultés. SPLASH rassemble joueurs, professionnels, chercheurs et entreprises autour d'un objectif commun : prendre soin du jeu vidéo."
+      title="Splash, l'onde de soin dans le jeu vidéo"
+      description="Splash est un podcast qui s'intéresse à ce qui se joue dans la vraie vie du jeu vidéo et de l'esport. À Splash, on ne cherche pas l'opinion, mais la compréhension."
       href="/le-projet"
-      ctaLabel="Découvrir le projet"
+      ctaLabel="En savoir plus sur le projet"
       visual={
         <div className="grid grid-cols-3 gap-3">
           {piliers.map((p) => (

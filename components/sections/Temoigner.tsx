@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { CheckCircle2, Heart, Lightbulb, Flag, UserPlus, Rocket } from "lucide-react";
+import { CheckCircle2, Heart, Lightbulb, Flag, UserPlus, Rocket, HandHeart } from "lucide-react";
 import { clsx } from "clsx";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
@@ -12,29 +12,30 @@ const reasons = [
   { value: "signalement", label: "Signaler un cas", icon: Flag },
   { value: "invite", label: "Recommander un invité", icon: UserPlus },
   { value: "initiative", label: "Envoyer une initiative", icon: Rocket },
+  { value: "confier", label: "Besoin de vous confier", icon: HandHeart },
 ];
 
 const visibilities = [
   {
-    value: "public",
-    label: "Témoignage public",
-    description: "Je suis d'accord pour être cité·e, avec mon accord sur la forme finale.",
-  },
-  {
     value: "anonyme",
-    label: "Témoignage anonyme",
-    description: "Mon histoire peut être partagée mais sans aucune donnée identifiante.",
+    label: "Anonyme",
+    description: "Votre histoire peut être partagée, mais sans aucune donnée permettant de vous identifier.",
   },
   {
     value: "contact",
-    label: "Simple prise de contact",
-    description: "Je veux juste échanger avec l'équipe, sans obligation de diffusion.",
+    label: "Privée",
+    description: "Vous souhaitez échanger avec l'équipe, sans diffusion de votre témoignage.",
+  },
+  {
+    value: "public",
+    label: "Publique",
+    description: "Vous acceptez que votre témoignage puisse être diffusé, sous réserve de valider sa forme finale.",
   },
 ];
 
 export default function Temoigner() {
   const [reason, setReason] = useState("histoire");
-  const [visibility, setVisibility] = useState("public");
+  const [visibility, setVisibility] = useState("anonyme");
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -46,9 +47,9 @@ export default function Temoigner() {
     <Section
       id="temoigner"
       theme="light"
-      eyebrow="Le bouton le plus important"
-      title="Témoigner"
-      description="Partagez votre histoire, proposez un sujet, signalez un cas, recommandez un invité ou envoyez-nous une initiative. Chaque message est lu par l'équipe éditoriale."
+      eyebrow="N'hésitez pas à"
+      title="Nous contacter"
+      description="Partagez votre histoire, proposez un sujet, signalez un cas, recommandez un invité, envoyez-nous une initiative, ou simplement confiez-vous. Chaque message est lu par l'équipe éditoriale."
     >
       <div className="mx-auto max-w-2xl rounded-xl3 border border-ink/8 bg-white p-8 shadow-sm md:p-10">
         {submitted ? (
@@ -68,9 +69,7 @@ export default function Temoigner() {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-8">
             <fieldset>
-              <legend className="mb-4 text-sm font-semibold text-ink">
-                Qu&apos;est-ce qui vous amène ?
-              </legend>
+              <legend className="mb-4 text-sm font-semibold text-ink">Vous nous écrivez pour :</legend>
               <div className="grid gap-3 sm:grid-cols-2">
                 {reasons.map((r) => (
                   <label
@@ -127,11 +126,13 @@ export default function Temoigner() {
               </div>
             </fieldset>
 
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">
-                  Nom {visibility === "anonyme" && <span className="text-ink/40">(facultatif)</span>}
-                </label>
+            <div>
+              <p className="mb-4 text-sm font-semibold text-ink">Vos coordonnées</p>
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">
+                    Nom {visibility === "anonyme" && <span className="text-ink/40">(facultatif)</span>}
+                  </label>
                 <input
                   id="name"
                   name="name"
@@ -152,6 +153,7 @@ export default function Temoigner() {
                   required={visibility !== "anonyme"}
                   className="focus-ring w-full rounded-xl2 border border-ink/15 px-4 py-2.5 text-sm outline-none focus:border-orange-500"
                 />
+              </div>
               </div>
             </div>
 
