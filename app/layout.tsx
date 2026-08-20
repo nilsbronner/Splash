@@ -22,11 +22,11 @@ const siteUrl = "https://splash-lemedia.fr";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "SPLASH — Ou comment heal le game.",
+    default: "SPLASH — Ça change la vie et le game !",
     template: "%s — SPLASH",
   },
   description:
-    "SPLASH est le média qui rassemble joueurs, professionnels, chercheurs, associations et entreprises autour d'un objectif commun : prendre soin du jeu vidéo. Podcast, ressources et communauté.",
+    "SPLASH, l'onde de soin dans le jeu vidéo. Un podcast qui s'intéresse à ce qui se joue dans la vraie vie du jeu vidéo et de l'esport, avec des ressources et une communauté.",
   keywords: [
     "SPLASH",
     "podcast jeu vidéo",
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     "inclusion jeu vidéo",
     "esport",
     "Skillcamp",
-    "BEMOTION",
-    "RESET",
+    "Bemotion",
+    "Reset",
   ],
   openGraph: {
-    title: "SPLASH — Ou comment heal le game.",
+    title: "SPLASH — Ça change la vie et le game !",
     description:
-      "Le média qui prend soin du jeu vidéo. Podcast, communauté et ressources pour joueurs, créateurs, associations et institutions.",
+      "Splash est un podcast qui s'intéresse à ce qui se joue dans la vraie vie du jeu vidéo et de l'esport. À Splash, on ne cherche pas l'opinion, mais la compréhension.",
     url: siteUrl,
     siteName: "SPLASH",
     locale: "fr_FR",
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SPLASH — Ou comment heal le game.",
+    title: "SPLASH — Ça change la vie et le game !",
     description:
-      "Le média qui prend soin du jeu vidéo. Podcast, communauté et ressources pour joueurs, créateurs, associations et institutions.",
+      "Splash est un podcast qui s'intéresse à ce qui se joue dans la vraie vie du jeu vidéo et de l'esport. À Splash, on ne cherche pas l'opinion, mais la compréhension.",
   },
   icons: {
     icon: "/brand/icon-orange.png",

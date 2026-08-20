@@ -17,16 +17,17 @@ export default function Footer() {
               className="h-9 w-auto"
             />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
-              Ou comment heal le game. Le média qui rassemble joueurs, professionnels, chercheurs,
-              associations et entreprises autour d&apos;un objectif commun : prendre soin du jeu vidéo.
+              Ça change la vie et le game ! L&apos;onde de soin dans le jeu vidéo.
             </p>
             <p className="mt-6 text-xs uppercase tracking-wide text-white/40">Un projet porté par</p>
             <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-white/70">
               <span>Skillcamp</span>
               <span className="text-white/30">·</span>
-              <span>Production BEMOTION</span>
+              <span>Strasbourg Esport</span>
               <span className="text-white/30">·</span>
-              <span>Caution scientifique RESET</span>
+              <span>Production Bemotion</span>
+              <span className="text-white/30">·</span>
+              <span>Apport scientifique Reset</span>
             </div>
           </div>
 
@@ -64,7 +65,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/40 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} SPLASH — Tous droits réservés.</p>
-          <p>Skillcamp × BEMOTION × RESET</p>
+          <p>Skillcamp × Strasbourg Esport × Bemotion × Reset</p>
         </div>
       </Container>
     </footer>

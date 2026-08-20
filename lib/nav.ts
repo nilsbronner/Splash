@@ -12,17 +12,15 @@ export const navLinks = [
 
 export const footerLinks = {
   legal: [
+    { label: "La Charte", href: "/engagement" },
     { label: "Mentions légales", href: "/mentions-legales" },
     { label: "Politique de confidentialité", href: "/confidentialite" },
     { label: "CGU", href: "/cgu" },
-    { label: "CGV", href: "/cgv" },
-    { label: "Cookies", href: "/cookies" },
     { label: "Contact", href: "/temoigner" },
   ],
   social: [
     { label: "Discord", href: "https://discord.gg/splash" },
-    { label: "LinkedIn", href: "https://linkedin.com/company/splash-media" },
-    { label: "YouTube", href: "https://youtube.com/@splash-media" },
-    { label: "Spotify", href: "https://open.spotify.com/show/splash-media" },
+    { label: "Instagram", href: "https://instagram.com/splash.media" },
+    { label: "Linktree", href: "https://linktr.ee/splash" },
   ],
 };
