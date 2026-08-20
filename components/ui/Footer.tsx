@@ -34,13 +34,26 @@ export default function Footer() {
           <div>
             <p className="mb-4 text-sm font-semibold text-white/90">Informations légales</p>
             <ul className="space-y-2.5 text-sm text-white/60">
-              {footerLinks.legal.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="focus-ring rounded transition-colors hover:text-white">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {footerLinks.legal.map((link) =>
+                "external" in link && link.external ? (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="focus-ring rounded transition-colors hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={link.href}>
+                    <Link href={link.href} className="focus-ring rounded transition-colors hover:text-white">
+                      {link.label}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 

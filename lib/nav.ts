@@ -12,7 +12,7 @@ export const navLinks = [
 
 export const footerLinks = {
   legal: [
-    { label: "La Charte", href: "/engagement" },
+    { label: "La Charte", href: "https://playgg.fr/", external: true },
     { label: "Mentions légales", href: "/mentions-legales" },
     { label: "Politique de confidentialité", href: "/confidentialite" },
     { label: "CGU", href: "/cgu" },
