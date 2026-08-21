@@ -63,7 +63,7 @@ export default function Navbar() {
             Témoigner
           </Button>
           <Button
-            href="https://discord.gg/splash"
+            href="https://discord.gg/K84WaeSFt"
             target="_blank"
             rel="noopener noreferrer"
             variant="primary"
@@ -101,7 +101,7 @@ export default function Navbar() {
                 Témoigner
               </Button>
               <Button
-                href="https://discord.gg/splash"
+                href="https://discord.gg/K84WaeSFt"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="primary"

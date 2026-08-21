@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { CheckCircle2, Heart, Lightbulb, Flag, UserPlus, Rocket } from "lucide-react";
+import { CheckCircle2, Heart, Lightbulb, Flag, UserPlus, Rocket, HeartHandshake } from "lucide-react";
 import { clsx } from "clsx";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
@@ -12,34 +12,73 @@ const reasons = [
   { value: "signalement", label: "Signaler un cas", icon: Flag },
   { value: "invite", label: "Recommander un invité", icon: UserPlus },
   { value: "initiative", label: "Envoyer une initiative", icon: Rocket },
+  { value: "confier", label: "Besoin de vous confier", icon: HeartHandshake },
 ];
 
 const visibilities = [
   {
-    value: "public",
-    label: "Témoignage public",
-    description: "Je suis d'accord pour être cité·e, avec mon accord sur la forme finale.",
-  },
-  {
     value: "anonyme",
-    label: "Témoignage anonyme",
-    description: "Mon histoire peut être partagée mais sans aucune donnée identifiante.",
+    label: "Anonyme",
+    description: "Votre histoire peut être partagée, mais sans aucune donnée permettant de m'identifier.",
   },
   {
-    value: "contact",
-    label: "Simple prise de contact",
-    description: "Je veux juste échanger avec l'équipe, sans obligation de diffusion.",
+    value: "privee",
+    label: "Privée",
+    description: "Vous souhaitez échanger avec l'équipe, sans diffusion de votre témoignage.",
+  },
+  {
+    value: "publique",
+    label: "Publique",
+    description: "Vous acceptez que votre témoignage puisse être diffusé, sous réserve de valider sa forme finale.",
   },
 ];
 
 export default function Temoigner() {
   const [reason, setReason] = useState("histoire");
-  const [visibility, setVisibility] = useState("public");
+  const [visibility, setVisibility] = useState("anonyme");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    if (submitting) return;
+
+    setError(null);
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      reason,
+      visibility,
+      name: formData.get("name")?.toString() ?? "",
+      email: formData.get("email")?.toString() ?? "",
+      message: formData.get("message")?.toString() ?? "",
+      consent: formData.get("consent") === "on",
+      website: formData.get("website")?.toString() ?? "",
+    };
+
+    try {
+      const res = await fetch("/api/temoigner", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const body = await res.json();
+
+      if (!res.ok || !body.ok) {
+        setError(body.errors?.[0]?.message ?? "L'envoi a échoué, merci de réessayer.");
+        return;
+      }
+
+      form.reset();
+      setSubmitted(true);
+    } catch {
+      setError("L'envoi a échoué, merci de vérifier votre connexion et réessayer.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -47,8 +86,8 @@ export default function Temoigner() {
       id="temoigner"
       theme="light"
       eyebrow="Le bouton le plus important"
-      title="Témoigner"
-      description="Partagez votre histoire, proposez un sujet, signalez un cas, recommandez un invité ou envoyez-nous une initiative. Chaque message est lu par l'équipe éditoriale."
+      title="Nous contacter"
+      description="Partagez votre histoire, proposez un sujet, signalez un cas, recommandez un invité, envoyez-nous une initiative ou confiez-vous simplement. Chaque message est lu par l'équipe éditoriale."
     >
       <div className="mx-auto max-w-2xl rounded-xl3 border border-ink/8 bg-white p-8 shadow-sm md:p-10">
         {submitted ? (
@@ -98,7 +137,7 @@ export default function Temoigner() {
             </fieldset>
 
             <fieldset>
-              <legend className="mb-4 text-sm font-semibold text-ink">Comment souhaitez-vous participer ?</legend>
+              <legend className="mb-4 text-sm font-semibold text-ink">De manière :</legend>
               <div className="grid gap-3">
                 {visibilities.map((v) => (
                   <label
@@ -170,7 +209,7 @@ export default function Temoigner() {
             </div>
 
             <label className="flex items-start gap-3 text-xs leading-relaxed text-ink/60">
-              <input type="checkbox" required className="mt-0.5" />
+              <input type="checkbox" name="consent" required className="mt-0.5" />
               J&apos;accepte que mes données soient traitées par SPLASH conformément à la{" "}
               <a href="/confidentialite" className="underline hover:text-ink">
                 politique de confidentialité
@@ -178,8 +217,24 @@ export default function Temoigner() {
               . Aucune information ne sera publiée sans mon accord.
             </label>
 
-            <Button type="submit" size="lg" className="w-full sm:w-auto">
-              Envoyer mon message
+            {/* Honeypot anti-spam : laissé vide par les humains, masqué visuellement et aux lecteurs d'écran. */}
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="absolute left-[-9999px] h-0 w-0 opacity-0"
+            />
+
+            {error && (
+              <p role="alert" className="text-sm font-medium text-red-600">
+                {error}
+              </p>
+            )}
+
+            <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={submitting}>
+              {submitting ? "Envoi en cours..." : "Envoyer mon message"}
             </Button>
           </form>
         )}

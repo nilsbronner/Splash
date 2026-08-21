@@ -18,7 +18,7 @@ export default function PodcastPage() {
         title="Découvrez les épisodes"
         description="Six voix, six histoires : trouvez l'épisode qui vous parle et filtrez par thématique."
         primary={{ label: "Voir tous les épisodes", href: "/episodes" }}
-        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/splash", external: true }}
+        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/K84WaeSFt", external: true }}
       />
     </>
   );

@@ -1,24 +1,31 @@
-import { BookOpen, Users, Sparkles } from "lucide-react";
+import { Target, MessagesSquare, BadgeCheck, Lightbulb, DoorOpen } from "lucide-react";
 import Section from "@/components/ui/Section";
 
 const piliers = [
   {
-    icon: BookOpen,
-    title: "Comprendre",
-    description:
-      "Donner des clés de lecture claires sur les enjeux de santé, d'inclusion et de société qui traversent le jeu vidéo aujourd'hui.",
+    icon: Target,
+    title: "L'ancrage réel",
+    description: "Chaque épisode part d'une situation concrète liée au jeu vidéo.",
   },
   {
-    icon: Users,
-    title: "Relier",
-    description:
-      "Créer des échanges entre joueurs, professionnels, chercheurs, associations et entreprises qui, trop souvent, ne se parlent pas.",
+    icon: MessagesSquare,
+    title: "La circulation de la parole",
+    description: "Aucune voix ne domine. Le dialogue est organisé, équilibré, médiatisé.",
   },
   {
-    icon: Sparkles,
-    title: "Agir",
-    description:
-      "Valoriser les solutions qui existent déjà : dispositifs d'aide, initiatives associatives, bonnes pratiques en entreprise.",
+    icon: BadgeCheck,
+    title: "Une information de qualité",
+    description: "Les experts sont des cautions d'une information vérifiée.",
+  },
+  {
+    icon: Lightbulb,
+    title: "La mise en compréhension",
+    description: "On ne cherche pas l'opinion, mais la compréhension.",
+  },
+  {
+    icon: DoorOpen,
+    title: "L'ouverture",
+    description: "Chaque épisode se termine par une perspective, pas une conclusion fermée.",
   },
 ];
 
@@ -26,11 +33,11 @@ export default function Mission() {
   return (
     <Section
       theme="dark"
-      eyebrow="Notre mission"
-      title="Trois piliers, un même cap"
-      align="center"
+      eyebrow="L'ADN de Splash"
+      title="Un format de dialogue structuré"
+      description="SPLASH est un format de dialogue structuré ancré dans l'univers du jeu vidéo et de l'esport. Son identité repose sur cinq piliers :"
     >
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {piliers.map((pilier, i) => (
           <div
             key={pilier.title}

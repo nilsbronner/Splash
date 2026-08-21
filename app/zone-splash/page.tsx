@@ -18,7 +18,7 @@ export default function ZoneSplashPage() {
         title="Vous avez vécu quelque chose de similaire ?"
         description="Signalez un cas ou proposez un sujet pour la Zone Splash — en toute confidentialité si vous le souhaitez."
         primary={{ label: "Signaler un cas", href: "/temoigner" }}
-        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/splash", external: true }}
+        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/K84WaeSFt", external: true }}
       />
     </>
   );

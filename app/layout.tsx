@@ -23,7 +23,7 @@ const siteUrl = "https://splash-lemedia.fr";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "SPLASH — Ou comment heal le game.",
+    default: "SPLASH — Ça change la vie et le game !",
     template: "%s — SPLASH",
   },
   description:
@@ -35,11 +35,11 @@ export const metadata: Metadata = {
     "inclusion jeu vidéo",
     "esport",
     "Skillcamp",
-    "BEMOTION",
-    "RESET",
+    "Bemotion",
+    "Reset",
   ],
   openGraph: {
-    title: "SPLASH — Ou comment heal le game.",
+    title: "SPLASH — Ça change la vie et le game !",
     description:
       "Le média qui prend soin du jeu vidéo. Podcast, communauté et ressources pour joueurs, créateurs, associations et institutions.",
     url: siteUrl,
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SPLASH — Ou comment heal le game.",
+    title: "SPLASH — Ça change la vie et le game !",
     description:
       "Le média qui prend soin du jeu vidéo. Podcast, communauté et ressources pour joueurs, créateurs, associations et institutions.",
   },

@@ -2,19 +2,19 @@ import Teaser from "@/components/ui/Teaser";
 
 const roles = [
   { name: "Skillcamp", role: "Structure porteuse" },
-  { name: "BEMOTION", role: "Partenaire production" },
-  { name: "RESET", role: "Caution scientifique" },
+  { name: "Bemotion", role: "Partenaire production" },
+  { name: "Reset", role: "Caution scientifique" },
 ];
 
 export default function ResetTeaser() {
   return (
     <Teaser
       theme="light"
-      eyebrow="Le projet RESET"
+      eyebrow="Le projet Reset"
       title="Notre caution scientifique et associative"
-      description="RESET est l'association partenaire de SPLASH sur les enjeux de santé et d'inclusion. Sa mission : garantir que chaque contenu repose sur des bases solides, humaines et vérifiées."
+      description="Reset est l'association partenaire de SPLASH sur les enjeux de santé et d'inclusion. Sa mission : garantir que chaque contenu repose sur des bases solides, humaines et vérifiées."
       href="/reset"
-      ctaLabel="Découvrir RESET"
+      ctaLabel="Découvrir Reset"
       reverse
       visual={
         <div className="divide-y divide-ink/8 rounded-xl2 border border-ink/8 bg-white shadow-sm">

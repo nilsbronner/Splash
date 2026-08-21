@@ -86,7 +86,7 @@ export default function Podcast() {
           <Badge tone="orange">Saison 1 · 6 épisodes</Badge>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-ink/60">
             Une équipe éditoriale portée par Alx à l&apos;animation, entourée de Lucia, Gabin et
-            Gabriel, avec l&apos;équipe de production BEMOTION au plateau et au montage.
+            Gabriel, avec l&apos;équipe de production Bemotion au plateau et au montage.
           </p>
         </div>
         <div className="flex flex-wrap gap-4">

@@ -14,80 +14,116 @@ export type Category = (typeof categories)[number];
 export interface Episode {
   id: string;
   number: number;
+  tagline: string;
   title: string;
   summary: string;
   categories: Category[];
   guests: string;
   duration: string;
   releaseDate: string;
+  upcoming?: boolean;
 }
 
 export const episodes: Episode[] = [
   {
-    id: "burnout-esport",
+    id: "stereotypes-prejuges",
     number: 1,
-    title: "Burnout : quand la passion devient un risque",
+    tagline: "Stéréotypes · préjugés",
+    title: "Stéréotypes, préjugés et préjudices",
     summary:
-      "Un joueur pro raconte son épuisement, une chercheuse en psychologie du sport décrypte les mécanismes, et l'équipe ouvre le débat sur la prévention en structure esport.",
-    categories: ["Santé", "Esport", "Recherche"],
-    guests: "Témoignage joueur pro · Dr. en psychologie du sport",
-    duration: "52 min",
-    releaseDate: "Épisode 1 — Saison 1",
+      "Le premier épisode de Splash sera consacré aux stéréotypes, aux préjugés et aux préjudices liés aux jeux vidéo et à l'esport.",
+    categories: ["Inclusion", "Diversité"],
+    guests: "Aurélien Pelte, joueur · Olivier Luttringer, Président de Reset",
+    duration: "",
+    releaseDate: "Premier mercredi d'octobre 2026",
   },
   {
-    id: "inclusion-manettes",
+    id: "addiction-sante",
     number: 2,
-    title: "Le jeu vidéo est-il vraiment pour tout le monde ?",
-    summary:
-      "Handicap et accessibilité : un joueur en situation de handicap partage son quotidien manette en main, un ergonome du jeu vidéo explique les avancées techniques.",
-    categories: ["Handicap", "Inclusion"],
-    guests: "Joueur & créateur de contenu · Expert accessibilité",
-    duration: "48 min",
-    releaseDate: "Épisode 2 — Saison 1",
+    tagline: "Addiction · Santé",
+    title: "Quand peut-on parler d'addiction au jeu vidéo ?",
+    summary: "Le deuxième épisode s'intéressera à ce qui se joue derrière une addiction au jeu vidéo.",
+    categories: ["Santé", "Recherche"],
+    guests:
+      "Gabriel Fauré, joueur · Dr Louis-Marie D'Ussel, addictologue, responsable médical en addictologie aux Hôpitaux universitaires de Strasbourg",
+    duration: "",
+    releaseDate: "Premier mercredi de novembre 2026",
   },
   {
-    id: "femmes-esport",
+    id: "diversite-mixite-joueuses",
     number: 3,
-    title: "Femmes dans l'esport : le plafond de verre numérique",
+    tagline: "Diversité · mixité · joueuses",
+    title: "La mixité au sein des équipes est-elle un atout pour l'esport ?",
     summary:
-      "Entre témoignage vécu, données de recherche sur la représentation et pistes concrètes pour les organisations, un état des lieux sans détour.",
+      "Enregistré en public aux Strasbourg Esport Days : entre témoignage vécu, données de recherche sur la représentation et pistes concrètes pour les organisations, un état des lieux sans détour.",
     categories: ["Diversité", "Esport", "Recherche"],
     guests: "Joueuse compétitive · Sociologue du sport",
     duration: "55 min",
-    releaseDate: "Épisode 3 — Saison 1",
+    releaseDate: "Premier mercredi de décembre 2026",
   },
   {
-    id: "toxicite-moderation",
+    id: "episode-4",
     number: 4,
-    title: "Toxicité en ligne : jusqu'où va la responsabilité des studios ?",
-    summary:
-      "Un ancien modérateur témoigne, un chercheur en cyberviolence pose le cadre, et l'équipe interroge les entreprises sur leurs politiques RSE.",
-    categories: ["Santé", "RSE", "Recherche"],
-    guests: "Ex-modérateur communautaire · Chercheur en cyberviolence",
-    duration: "50 min",
-    releaseDate: "Épisode 4 — Saison 1",
+    tagline: "À venir",
+    title: "[Titre de l'épisode]",
+    summary: "[Présentation de l'épisode]",
+    categories: [],
+    guests: "[Intervenants]",
+    duration: "",
+    releaseDate: "Premier mercredi de janvier 2027",
+    upcoming: true,
   },
   {
-    id: "management-studios",
+    id: "episode-5",
     number: 5,
-    title: "Crunch : peut-on encore faire des jeux sans s'épuiser ?",
-    summary:
-      "Un développeur revient sur une période de crunch, une consultante RH spécialisée jeu vidéo propose des modèles alternatifs de management.",
-    categories: ["Management", "Santé", "RSE"],
-    guests: "Développeur de jeux vidéo · Consultante RH gaming",
-    duration: "58 min",
-    releaseDate: "Épisode 5 — Saison 1",
+    tagline: "À venir",
+    title: "[Titre de l'épisode]",
+    summary: "[Présentation de l'épisode]",
+    categories: [],
+    guests: "[Intervenants]",
+    duration: "",
+    releaseDate: "Premier mercredi de février 2027",
+    upcoming: true,
   },
   {
-    id: "addiction-familles",
+    id: "episode-6",
     number: 6,
-    title: "Addiction : ce que les familles ne savent pas toujours dire",
-    summary:
-      "Un témoignage familial fort, un addictologue spécialisé écrans, et une ouverture sur les dispositifs d'aide existants en France.",
-    categories: ["Santé", "Inclusion"],
-    guests: "Témoignage familial · Addictologue",
-    duration: "53 min",
-    releaseDate: "Épisode 6 — Saison 1",
+    tagline: "À venir",
+    title: "[Titre de l'épisode]",
+    summary: "[Présentation de l'épisode]",
+    categories: [],
+    guests: "[Intervenants]",
+    duration: "",
+    releaseDate: "Premier mercredi de mars 2027",
+    upcoming: true,
+  },
+];
+
+export interface NewsItem {
+  id: string;
+  date: string;
+  title: string;
+  body: string;
+  highlight?: string;
+  ctaLabel: string;
+  ctaHref: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
+  externalSecondary?: boolean;
+}
+
+export const newsItems: NewsItem[] = [
+  {
+    id: "sed-2026",
+    date: "6 septembre 2026",
+    title: "Enregistrement public de Splash aux SED",
+    body: "Le troisième épisode de SPLASH sera enregistré en public le 6 septembre à 10h, au Palais de la musique et des congrès de Strasbourg, dans le cadre des Strasbourg Esport Days.",
+    highlight: "La mixité des équipes est-elle un atout pour l'esport ?",
+    ctaLabel: "En savoir plus sur l'épisode 3",
+    ctaHref: "/episodes",
+    secondaryCtaLabel: "Venir aux SED",
+    secondaryCtaHref: "https://www.strasbourg-esport.fr/",
+    externalSecondary: true,
   },
 ];
 
@@ -126,7 +162,7 @@ export const faqCategories: FaqCategory[] = [
       {
         question: "Puis-je témoigner de manière anonyme ?",
         answer:
-          "Oui. Le formulaire Témoigner propose trois options : témoignage public, témoignage anonyme, ou simple prise de contact sans obligation de diffusion.",
+          "Oui. Le formulaire de contact propose trois modes de participation : anonyme, privé (échange avec l'équipe sans diffusion) ou public.",
       },
       {
         question: "Que devient mon témoignage une fois envoyé ?",
@@ -218,13 +254,13 @@ export const supporters: Supporter[] = [
     href: "#",
   },
   {
-    name: "BEMOTION",
+    name: "Bemotion",
     description: "Partenaire production audiovisuelle : podcast, plateau, direction artistique vidéo.",
     tier: "partenaires",
     href: "#",
   },
   {
-    name: "RESET",
+    name: "Reset",
     description: "Association partenaire, caution scientifique et associative sur les enjeux santé et inclusion.",
     tier: "partenaires",
     href: "/reset",

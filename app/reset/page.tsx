@@ -4,9 +4,9 @@ import CtaBanner from "@/components/ui/CtaBanner";
 import Reset from "@/components/sections/Reset";
 
 export const metadata: Metadata = {
-  title: "Le projet RESET",
+  title: "Le projet Reset",
   description:
-    "RESET est l'association partenaire de SPLASH sur les enjeux de santé et d'inclusion dans le jeu vidéo : notre caution scientifique et associative.",
+    "Reset est l'association partenaire de SPLASH sur les enjeux de santé et d'inclusion dans le jeu vidéo : notre caution scientifique et associative.",
 };
 
 export default function ResetPage() {

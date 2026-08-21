@@ -13,10 +13,10 @@ export default function LeProjetTeaser() {
       id="decouvrir"
       theme="light"
       eyebrow="Le projet"
-      title="Le jeu vidéo n'est plus seulement un loisir."
-      description="C'est un espace de vie où l'on vit aussi des difficultés. SPLASH rassemble joueurs, professionnels, chercheurs et entreprises autour d'un objectif commun : prendre soin du jeu vidéo."
+      title="L'onde de soin dans le jeu vidéo"
+      description="SPLASH est un format de dialogue structuré ancré dans l'univers du jeu vidéo et de l'esport, fondé sur une exigence pédagogique, un sérieux éditorial et un cadre de dialogue structuré."
       href="/le-projet"
-      ctaLabel="Découvrir le projet"
+      ctaLabel="En savoir plus sur le projet"
       visual={
         <div className="grid grid-cols-3 gap-3">
           {piliers.map((p) => (

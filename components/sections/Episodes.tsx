@@ -19,8 +19,8 @@ export default function Episodes() {
       id="episodes"
       theme="dark"
       eyebrow="Les épisodes"
-      title="Saison 1 — six voix, six histoires"
-      description="Filtrez les épisodes par thématique pour retrouver celui qui vous parle."
+      title="Saison 1"
+      description="Un nouvel épisode le premier mercredi de chaque mois."
     >
       <div className="mb-10 flex flex-wrap gap-2" role="group" aria-label="Filtrer les épisodes par thématique">
         {(["Tous", ...categories] as const).map((cat) => (
@@ -66,13 +66,18 @@ export default function Episodes() {
                   </span>
                 ))}
               </div>
-              <h3 className="font-display text-lg font-semibold leading-snug">{ep.title}</h3>
+              <p className="text-xs font-semibold uppercase tracking-widest text-orange-300">
+                {ep.tagline}
+              </p>
+              <h3 className="mt-1.5 font-display text-lg font-semibold leading-snug">{ep.title}</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-white/55">{ep.summary}</p>
               <div className="mt-5 flex items-center justify-between border-t border-white/10 pt-4 text-xs text-white/45">
                 <span>{ep.guests}</span>
-                <span className="flex items-center gap-1">
-                  <Clock size={13} /> {ep.duration}
-                </span>
+                {ep.duration && (
+                  <span className="flex items-center gap-1">
+                    <Clock size={13} /> {ep.duration}
+                  </span>
+                )}
               </div>
             </div>
           </article>

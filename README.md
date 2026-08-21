@@ -1,8 +1,8 @@
 # SPLASH — site web
 
-Site vitrine du projet SPLASH (« Ou comment heal le game. »), média sur la santé, l'inclusion et
-les enjeux sociaux du jeu vidéo. Un projet porté par **Skillcamp**, produit par **BEMOTION**, avec
-la caution scientifique et associative de **RESET**.
+Site vitrine du projet SPLASH (« Ça change la vie et le game ! L'onde de soin dans le jeu vidéo. »),
+média sur la santé, l'inclusion et les enjeux sociaux du jeu vidéo. Un projet porté par
+**Skillcamp**, produit par **Bemotion**, avec la caution scientifique et associative de **Reset**.
 
 ## Stack
 
@@ -84,8 +84,12 @@ Pour ajouter du contenu à une page dédiée, éditer directement le composant c
 
 - Les visuels (plateau, logos partenaires, photos presse) sont pour l'instant des placeholders
   stylisés (dégradés, initiales) en attendant les vraies photos/captures.
-- Le formulaire « Témoigner » est fonctionnel côté interface (validation, états) mais n'est pas
-  encore relié à un backend / service d'envoi — à connecter avant mise en production.
+- Le formulaire « Témoigner » est relié à une route API (`app/api/temoigner/route.ts`) qui valide
+  la soumission côté serveur puis envoie un email à l'équipe (+ un accusé de réception si un email
+  a été fourni) via [Resend](https://resend.com). Copier `.env.example` en `.env.local` et
+  renseigner `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` et `CONTACT_EMAIL` pour l'activer. Tant que ces
+  variables ne sont pas configurées, le formulaire répond une erreur claire au lieu d'échouer
+  silencieusement.
 - La section Presse liste les livrables attendus, marqués « Bientôt disponible » : à remplacer par
   les vrais fichiers téléchargeables dès qu'ils existent.
 - Les mentions légales contiennent des champs `[à compléter]` (SIREN, adresse, hébergeur) à

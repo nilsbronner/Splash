@@ -22,7 +22,7 @@ export default function SoutenirPage() {
         title="Prêt à nous rejoindre ?"
         description="Un message suffit pour démarrer la conversation, quelle que soit la forme de votre soutien."
         primary={{ label: "Nous contacter", href: "/temoigner" }}
-        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/splash", external: true }}
+        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/K84WaeSFt", external: true }}
       />
     </>
   );

@@ -15,9 +15,9 @@ export default function Confidentialite() {
 
       <h2>Données collectées</h2>
       <p>
-        Selon le mode de participation choisi (public, anonyme ou simple prise de contact), nous
-        collectons : nom (facultatif), adresse email, contenu du message. Aucune donnée
-        identifiante n&apos;est conservée pour les témoignages soumis en mode anonyme.
+        Selon le mode de participation choisi (anonyme, privée ou publique), nous collectons : nom
+        (facultatif), adresse email, contenu du message. Aucune donnée identifiante n&apos;est
+        conservée pour les témoignages soumis en mode anonyme.
       </p>
 
       <h2>Finalités du traitement</h2>

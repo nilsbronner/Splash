@@ -18,7 +18,7 @@ export default function EpisodesPage() {
         title="Vous avez une histoire à raconter ?"
         description="Chaque épisode part d'un témoignage. Le vôtre pourrait être le prochain."
         primary={{ label: "Témoigner", href: "/temoigner" }}
-        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/splash", external: true }}
+        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/K84WaeSFt", external: true }}
       />
     </>
   );

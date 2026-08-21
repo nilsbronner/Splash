@@ -18,7 +18,7 @@ export default function FaqPage() {
         title="Vous ne trouvez pas votre réponse ?"
         description="Écrivez-nous directement, on vous répond."
         primary={{ label: "Nous contacter", href: "/temoigner" }}
-        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/splash", external: true }}
+        secondary={{ label: "Rejoindre Discord", href: "https://discord.gg/K84WaeSFt", external: true }}
       />
     </>
   );

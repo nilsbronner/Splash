@@ -8,12 +8,12 @@ const roles = [
     description: "Porte le projet SPLASH, sa stratégie et sa pérennité.",
   },
   {
-    name: "BEMOTION",
+    name: "Bemotion",
     role: "Partenaire production",
     description: "Produit le podcast et le plateau : réalisation, tournage, direction artistique vidéo.",
   },
   {
-    name: "RESET",
+    name: "Reset",
     role: "Caution scientifique & associative",
     description: "Apporte la rigueur scientifique et l'ancrage associatif sur les enjeux santé et inclusion.",
   },
@@ -42,9 +42,9 @@ export default function Reset() {
     <Section
       id="reset"
       theme="dark"
-      eyebrow="Le projet RESET"
+      eyebrow="Le projet Reset"
       title="Notre caution scientifique et associative"
-      description="RESET est l'association partenaire de SPLASH sur les enjeux de santé et d'inclusion dans le jeu vidéo. Sa mission : garantir que chaque contenu produit repose sur des bases solides, humaines et vérifiées."
+      description="Reset est l'association partenaire de SPLASH sur les enjeux de santé et d'inclusion dans le jeu vidéo. Sa mission : garantir que chaque contenu produit repose sur des bases solides, humaines et vérifiées."
     >
       <div className="mb-14 flex flex-col gap-3 rounded-xl3 border border-white/10 bg-white/[0.03] p-6 md:flex-row md:items-stretch md:gap-0 md:divide-x md:divide-white/10 md:p-0">
         {roles.map((r) => (
