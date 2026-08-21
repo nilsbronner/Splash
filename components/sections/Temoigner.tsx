@@ -37,10 +37,48 @@ export default function Temoigner() {
   const [reason, setReason] = useState("histoire");
   const [visibility, setVisibility] = useState("anonyme");
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    if (submitting) return;
+
+    setError(null);
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      reason,
+      visibility,
+      name: formData.get("name")?.toString() ?? "",
+      email: formData.get("email")?.toString() ?? "",
+      message: formData.get("message")?.toString() ?? "",
+      consent: formData.get("consent") === "on",
+      website: formData.get("website")?.toString() ?? "",
+    };
+
+    try {
+      const res = await fetch("/api/temoigner", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const body = await res.json();
+
+      if (!res.ok || !body.ok) {
+        setError(body.errors?.[0]?.message ?? "L'envoi a échoué, merci de réessayer.");
+        return;
+      }
+
+      form.reset();
+      setSubmitted(true);
+    } catch {
+      setError("L'envoi a échoué, merci de vérifier votre connexion et réessayer.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -172,7 +210,7 @@ export default function Temoigner() {
             </div>
 
             <label className="flex items-start gap-3 text-xs leading-relaxed text-ink/60">
-              <input type="checkbox" required className="mt-0.5" />
+              <input type="checkbox" name="consent" required className="mt-0.5" />
               J&apos;accepte que mes données soient traitées par SPLASH conformément à la{" "}
               <a href="/confidentialite" className="underline hover:text-ink">
                 politique de confidentialité
@@ -180,8 +218,24 @@ export default function Temoigner() {
               . Aucune information ne sera publiée sans mon accord.
             </label>
 
-            <Button type="submit" size="lg" className="w-full sm:w-auto">
-              Envoyer mon message
+            {/* Honeypot anti-spam : laissé vide par les humains, masqué visuellement et aux lecteurs d'écran. */}
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="absolute left-[-9999px] h-0 w-0 opacity-0"
+            />
+
+            {error && (
+              <p role="alert" className="text-sm font-medium text-red-600">
+                {error}
+              </p>
+            )}
+
+            <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={submitting}>
+              {submitting ? "Envoi en cours..." : "Envoyer mon message"}
             </Button>
           </form>
         )}
